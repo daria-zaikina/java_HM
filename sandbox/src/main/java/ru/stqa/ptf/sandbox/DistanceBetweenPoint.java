@@ -1,6 +1,6 @@
 package ru.stqa.ptf.sandbox;
 
-public class DistanseBetweenPoint {
+public class DistanceBetweenPoint {
 
     public static void main(String[] args) {
         Point p1 = new Point(1,2);
