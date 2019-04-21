@@ -2,6 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="7856b437-a464-4e3d-a3df-f3c607036beb" name="Default" comment="">
+      <change afterPath="$PROJECT_DIR$/addressbook-web-tests/src/test/java/ru/stqa/pft/addressbook/GroupData.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/addressbook-web-tests/src/test/java/ru/stqa/pft/addressbook/GroupCreationTests.java" beforeDir="false" afterPath="$PROJECT_DIR$/addressbook-web-tests/src/test/java/ru/stqa/pft/addressbook/GroupCreationTests.java" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/sandbox/.gradle/" />
@@ -61,8 +63,27 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/addressbook-web-tests/src/test/java/ru/stqa/pft/addressbook/GroupCreationTests.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="255">
-              <caret line="20" column="61" selection-start-line="20" selection-start-column="61" selection-end-line="20" selection-end-column="61" />
+            <state relative-caret-position="165">
+              <caret line="32" column="12" selection-start-line="32" selection-start-column="12" selection-end-line="32" selection-end-column="12" />
+              <folding>
+                <element signature="e#1114#1115#0" expanded="true" />
+                <element signature="e#1173#1174#0" expanded="true" />
+                <element signature="e#1107#1108#0" expanded="true" />
+                <element signature="e#1158#1159#0" expanded="true" />
+                <element signature="e#1499#1500#0" expanded="true" />
+                <element signature="e#1547#1548#0" expanded="true" />
+                <element signature="e#1514#1515#0" expanded="true" />
+                <element signature="e#1569#1570#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/addressbook-web-tests/src/test/java/ru/stqa/pft/addressbook/GroupData.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="30">
+              <caret line="2" column="13" selection-start-line="2" selection-start-column="13" selection-end-line="2" selection-end-column="13" />
             </state>
           </provider>
         </entry>
@@ -158,6 +179,7 @@
   </component>
   <component name="PropertiesComponent">
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
+    <property name="extract.method.default.visibility" value="private" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$/addressbook-web-tests/build.gradle" />
     <property name="project.structure.last.edited" value="Modules" />
     <property name="project.structure.proportion" value="0.15" />
@@ -355,7 +377,6 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="-3" y="-1" width="1372" height="745" extended-state="6" />
-    <editor active="true" />
     <layout>
       <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.2810606" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
@@ -366,7 +387,7 @@
       <window_info id="Favorites" order="6" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" />
-      <window_info active="true" anchor="bottom" id="Run" order="2" visible="true" weight="0.23462783" />
+      <window_info anchor="bottom" id="Run" order="2" weight="0.23462783" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
@@ -450,10 +471,27 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/addressbook-web-tests/src/test/java/ru/stqa/pft/addressbook/GroupData.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="30">
+          <caret line="2" column="13" selection-start-line="2" selection-start-column="13" selection-end-line="2" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/addressbook-web-tests/src/test/java/ru/stqa/pft/addressbook/GroupCreationTests.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="255">
-          <caret line="20" column="61" selection-start-line="20" selection-start-column="61" selection-end-line="20" selection-end-column="61" />
+        <state relative-caret-position="165">
+          <caret line="32" column="12" selection-start-line="32" selection-start-column="12" selection-end-line="32" selection-end-column="12" />
+          <folding>
+            <element signature="e#1114#1115#0" expanded="true" />
+            <element signature="e#1173#1174#0" expanded="true" />
+            <element signature="e#1107#1108#0" expanded="true" />
+            <element signature="e#1158#1159#0" expanded="true" />
+            <element signature="e#1499#1500#0" expanded="true" />
+            <element signature="e#1547#1548#0" expanded="true" />
+            <element signature="e#1514#1515#0" expanded="true" />
+            <element signature="e#1569#1570#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
