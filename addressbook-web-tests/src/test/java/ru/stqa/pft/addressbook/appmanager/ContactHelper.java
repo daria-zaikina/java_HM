@@ -15,7 +15,7 @@ public class ContactHelper extends BaseHelper{
     }
 
     public void submitContactCreation() {
-        click(By.xpath("(.//*[normalize-space(text()) and normalize-space(.)='Notes:'])[1]/following::input[1]"));
+        click(By.xpath("(//input[@name='submit'])[2]"));
     }
 
     public void fillContactForm(ContactData contactData) {
