@@ -21,6 +21,8 @@ public class BaseHelper {
         wd.findElement(locator).click();
     }
 
+    protected void alert() { wd.switchTo().alert().accept(); }
+
     private boolean isAlertPresent() {
         try {
             wd.switchTo().alert();
