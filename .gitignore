@@ -3,6 +3,7 @@
 build/
 
 .idea/
+./addressbook-web-tests/out
 
 # Ignore Gradle GUI config
 gradle-app.setting

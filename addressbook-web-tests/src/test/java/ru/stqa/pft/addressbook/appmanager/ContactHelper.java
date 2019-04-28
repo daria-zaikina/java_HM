@@ -24,6 +24,10 @@ public class ContactHelper extends BaseHelper{
 
     public void acceptAlert() { alert(); }
 
+    public void editContact() { click(By.xpath("(//img[@title='Edit'])[1]")); }
+
+    public void submitUpdateContact() { click(By.name("update")); }
+
     public void fillContactForm(ContactData contactData) {
         type(By.name("firstname"),contactData.getFirstname());
         type(By.name("lastname"),contactData.getLastname());
