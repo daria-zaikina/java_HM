@@ -18,7 +18,6 @@ public class BaseHelper {
         if ( text != null) {
             String existingText = wd.findElement(locator).getAttribute("value");
             if (! text.equals(existingText)) {
-
                 wd.findElement(locator).clear();
                 wd.findElement(locator).sendKeys(text);
             }
