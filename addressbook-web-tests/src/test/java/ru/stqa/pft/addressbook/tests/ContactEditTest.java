@@ -7,11 +7,11 @@ public class ContactEditTest extends TestBase {
 
     @Test
     public void testContactEdit() throws Exception {
-        app.getContactHelper().returnToContactPage();
+        app.getNavigationHelper().returnToContactPage();
         app.getContactHelper().editContact();
-        app.getContactHelper().fillContactForm(new ContactData("Elena", "Kirova", "89139330933", "blabla@gmail.com", "Novosibirsk Central st. 15"));
+        app.getContactHelper().fillContactForm(new ContactData("Elena", "Kirova", "89139330933", "blabla@gmail.com", "Novosibirsk Central st. 15", null), false);
         app.getContactHelper().submitUpdateContact();
-        app.getContactHelper().returnToContactPage();
+        app.getNavigationHelper().returnToContactPage();
 
 
 
