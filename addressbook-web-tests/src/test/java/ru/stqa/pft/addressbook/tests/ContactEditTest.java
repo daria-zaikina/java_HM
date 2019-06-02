@@ -38,7 +38,7 @@ public class ContactEditTest extends TestBase {
                 .withAdress("Novosibirsk Central st. 15");
         app.contact().modifyed(contact);
         Contacts after = app.contact().all();
-        assertThat(after.size(), equalTo(before.size()));
+        assertThat(app.contact().count(), equalTo(before.size()));
         assertThat(after, equalTo(before.without(modifyedContact).withAdded(contact)));
 
 

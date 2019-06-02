@@ -31,7 +31,7 @@ public class GroupEditTest extends TestBase {
                 .withFooter("test_footer");
         app.group().modify(group);
         Groups after = app.group().all();
-        assertThat(after.size(), equalTo(before.size()));
+        assertThat(app.group().count(), equalTo(before.size()));
         assertThat(after, equalTo(before.without(modifyGroup).withAdded(group)));
 
     }
