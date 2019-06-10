@@ -1,0 +1,44 @@
+[
+  {
+    "firstname": "Daria 0",
+    "lastname": "Zaikina 0",
+    "mobile": "89130184320",
+    "email": "blabla0@gmail.com",
+    "address": "Novisibirsk Ivanova test 0"
+  },
+  {
+    "firstname": "Daria 1",
+    "lastname": "Zaikina 1",
+    "mobile": "89130184321",
+    "email": "blabla1@gmail.com",
+    "address": "Novisibirsk Ivanova test 1"
+  },
+  {
+    "firstname": "Daria 2",
+    "lastname": "Zaikina 2",
+    "mobile": "89130184322",
+    "email": "blabla2@gmail.com",
+    "address": "Novisibirsk Ivanova test 2"
+  },
+  {
+    "firstname": "Daria 3",
+    "lastname": "Zaikina 3",
+    "mobile": "89130184323",
+    "email": "blabla3@gmail.com",
+    "address": "Novisibirsk Ivanova test 3"
+  },
+  {
+    "firstname": "Daria 4",
+    "lastname": "Zaikina 4",
+    "mobile": "89130184324",
+    "email": "blabla4@gmail.com",
+    "address": "Novisibirsk Ivanova test 4"
+  },
+  {
+    "firstname": "Daria 5",
+    "lastname": "Zaikina 5",
+    "mobile": "89130184325",
+    "email": "blabla5@gmail.com",
+    "address": "Novisibirsk Ivanova test 5"
+  }
+]
