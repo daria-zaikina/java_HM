@@ -2,6 +2,8 @@ package ru.stqa.pft.addressbook.model;
 
 import com.google.gson.annotations.Expose;
 
+import javax.persistence.Entity;
+import javax.persistence.Table;
 import java.io.File;
 import java.util.Objects;
 
