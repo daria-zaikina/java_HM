@@ -10,8 +10,7 @@ import static org.hamcrest.MatcherAssert.assertThat;
 public class ContactAdressTest extends TestBase {
     @BeforeMethod
     public void ensurePrecondition() {
-        app.goTo().returnToContactPage();
-        if (app.contact().all().size() == 0) {
+        if (app.db().contacts().size() == 0) {
             app.contact().contactCreation(new ContactData()
                     .withFirstName("Daria")
                     .withLastName("Zaikina")
@@ -22,7 +21,8 @@ public class ContactAdressTest extends TestBase {
     }
     @Test
     public void testContactAdress() {
-        ContactData contact = app.contact().all().iterator().next();
+        ContactData contact = app.db().contacts().iterator().next();
+        app.goTo().returnToContactPage();
         ContactData contactInfoFromEditForm = app.contact().InfoFromEditForm(contact);
 
         assertThat(contact.getAddress(), equalTo(contactInfoFromEditForm.getAddress()));

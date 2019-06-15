@@ -37,21 +37,12 @@ public class ContactCreationTest extends TestBase{
       List<ContactData> contact = gson.fromJson(json, new TypeToken<List<ContactData>>() {}.getType());
       return contact.stream().map((g) -> new Object[] {g}).collect(Collectors.toList()).iterator();
     }
-//    String json = "";
-//    String line = reader.readLine();
-//    while (line != null) {
-//      json +=line;
-//      line = reader.readLine();
-//    }
-//    Gson gson  = new Gson();
-//    List<ContactData> contact = gson.fromJson(json, new TypeToken<List<ContactData>>() {}.getType());
-//    return contact.stream().map((g) -> new Object[] {g}).collect(Collectors.toList()).iterator();
   }
 
   @Test(enabled = false)
   public void testContactCreation() throws Exception {
     app.goTo().returnToContactPage();
-    Contacts before = app.contact().all();
+    Contacts before = app.db().contacts();
     app.contact().gotoContactCreationPage();
     File photo = new File("src/test/resources/contact.jpg");
     ContactData contact = new ContactData()
@@ -62,7 +53,7 @@ public class ContactCreationTest extends TestBase{
             .withEmail("blabla@gmail.com")
             .withAdress("Novosibirsk Central st. 13");
     app.contact().create(contact);
-    Contacts after = app.contact().all();
+    Contacts after = app.db().contacts();
     assertThat(app.contact().count(), equalTo(before.size()+1));
     assertThat(after, equalTo(before.withAdded(contact.withId(after.stream().mapToInt((g) -> g.getId()).max().getAsInt()))));
 
@@ -70,10 +61,10 @@ public class ContactCreationTest extends TestBase{
   @Test(dataProvider = "validContactFromJson")
   public void testContactCreationFromJson(ContactData contact) throws Exception {
     app.goTo().returnToContactPage();
-    Contacts before = app.contact().all();
+    Contacts before = app.db().contacts();
     app.contact().gotoContactCreationPage();
     app.contact().create(contact);
-    Contacts after = app.contact().all();
+    Contacts after = app.db().contacts();
     assertThat(app.contact().count(), equalTo(before.size()+1));
     assertThat(after, equalTo(before.withAdded(contact.withId(after.stream().mapToInt((g) -> g.getId()).max().getAsInt()))));
 
