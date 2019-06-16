@@ -67,14 +67,8 @@ public class ContactCreationTest extends TestBase{
     Contacts after = app.db().contacts();
     assertThat(app.contact().count(), equalTo(before.size()+1));
     assertThat(after, equalTo(before.withAdded(contact.withId(after.stream().mapToInt((g) -> g.getId()).max().getAsInt()))));
+    verifyContactsListInUi();
 
   }
-
-//  @Test
-//  public void currentDir() {
-//    File currentDir = new File(".");
-//    System.out.println(currentDir.getAbsolutePath());
-//
-//  }
 
 }

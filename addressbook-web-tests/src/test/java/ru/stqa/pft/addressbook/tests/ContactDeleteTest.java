@@ -4,8 +4,6 @@ import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.Test;
 import ru.stqa.pft.addressbook.model.ContactData;
 
-import java.util.Set;
-
 import static org.hamcrest.CoreMatchers.*;
 import static org.hamcrest.MatcherAssert.*;
 
@@ -35,7 +33,7 @@ public class ContactDeleteTest extends TestBase {
         Contacts after = app.db().contacts();
         assertThat(app.contact().count(), equalTo(before.size() - 1));
         assertThat(after, equalTo(before.without(deletedContact)));
-
+        verifyContactsListInUi();
 
     }
 

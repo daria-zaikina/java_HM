@@ -8,6 +8,7 @@ import org.openqa.selenium.support.ui.Select;
 import org.testng.Assert;
 import ru.stqa.pft.addressbook.model.ContactData;
 import ru.stqa.pft.addressbook.model.Contacts;
+import ru.stqa.pft.addressbook.model.GroupData;
 
 import java.util.List;
 
@@ -30,6 +31,8 @@ public class ContactHelper extends BaseHelper{
     public void chooseContactById(int id) {
         wd.findElement(By.cssSelector("input[value='" + id + "']")).click();
     }
+
+
 
     public void editContact(int id) {
         wd.findElement(By.cssSelector(String.format("a[href='edit.php?id=%s']", id))).click();
@@ -55,7 +58,10 @@ public class ContactHelper extends BaseHelper{
         type(By.name("address"), contactData.getAddress());
 
         if(creation && !notExistGroupForContact()) {
-            new Select(wd.findElement(By.name("new_group"))).selectByVisibleText(contactData.getGroup());
+//            new Select(wd.findElement(By.name("new_group"))).selectByVisibleText(contactData.getGroup());
+            Assert.assertTrue(contactData.getGroups().size() == 1);
+            new Select(wd.findElement(By.name("new_group"))).selectByVisibleText(contactData.getGroups()
+                    .iterator().next().getName());
         } else if (!creation) {
             Assert.assertFalse(isElementPresent(By.name("new_group")));
         }
@@ -163,5 +169,31 @@ public class ContactHelper extends BaseHelper{
 
 
 
+    }
+    public void selectDownGroup(GroupData group) {
+        new Select(wd.findElement(By.name("to_group"))).selectByVisibleText(group.getName());
+    }
+
+    public void clickAddToGroup() {
+        click(By.name("add"));
+    }
+
+    public void clickRemoveFromGroup() {
+        click(By.name("remove"));
+    }
+    public void addToGroup(GroupData group, ContactData contact) {
+        chooseContactById(contact.getId());
+        selectDownGroup(group);
+        clickAddToGroup();
+    }
+
+    public void selectGroupForSort(GroupData group) {
+        new Select(wd.findElement(By.name("group"))).selectByVisibleText(group.getName());
+    }
+
+    public void deleteFromGroup(ContactData contact, GroupData group) {
+        selectGroupForSort(group);
+        chooseContactById(contact.getId());
+        clickRemoveFromGroup();
     }
 }

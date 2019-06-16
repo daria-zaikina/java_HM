@@ -10,6 +10,7 @@ import ru.stqa.pft.addressbook.model.Contacts;
 import ru.stqa.pft.addressbook.model.GroupData;
 import ru.stqa.pft.addressbook.model.Groups;
 
+import javax.persistence.Query;
 import java.util.List;
 
 public class DbHelper {
@@ -36,6 +37,15 @@ public class DbHelper {
         SharedSessionContract session = sessionFactory.openSession();
         session.beginTransaction();
         List<ContactData> result = session.createQuery( "from ContactData where deprecated = '0000-00-00' " ).list();
+        session.getTransaction().commit();
+        session.close();
+        return new Contacts(result);
+    }
+    public Contacts contactsWithId(int id) {
+        SharedSessionContract session = sessionFactory.openSession();
+        session.beginTransaction();
+        List<ContactData> result = session.createQuery( "from ContactData where deprecated = '0000-00-00'")
+                .list();
         session.getTransaction().commit();
         session.close();
         return new Contacts(result);
